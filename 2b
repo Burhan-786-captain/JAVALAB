@@ -1,0 +1,43 @@
+/**
+ * Palindrome Checker
+ *
+ * Check if an integer 'n' is a palindrome without
+ * converting it to a string.
+ * It does this by reversing the number and
+ * comparing it to the original.
+ */
+
+public class PalindromeChecker {
+
+    public static boolean isPalindrome(int n) {
+
+        // Handle negative numbers
+        if (n < 0) {
+            return false;
+        }
+
+        int originalN = n;
+        long reversedN = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            reversedN = reversedN * 10 + digit;
+            n /= 10;
+        }
+
+        return originalN == reversedN;
+    }
+
+    public static void main(String[] args) {
+
+        int number1 = 121;
+        int number2 = 9876789;
+        int number3 = 12345;
+        int number4 = -101;
+
+        System.out.println("Is " + number1 + " a palindrome? " + isPalindrome(number1));
+        System.out.println("Is " + number2 + " a palindrome? " + isPalindrome(number2));
+        System.out.println("Is " + number3 + " a palindrome? " + isPalindrome(number3));
+        System.out.println("Is " + number4 + " a palindrome? " + isPalindrome(number4));
+    }
+}

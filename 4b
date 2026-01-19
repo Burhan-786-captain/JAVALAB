@@ -1,0 +1,21 @@
+// Program to demonstrate implicit and explicit type conversions
+
+public class TypeConversionDemo {
+    public static void main(String[] args) {
+        // Implicit Type Conversion (Widening)
+        int intVal = 100;
+        double doubleVal = intVal; // int is automatically converted to double
+
+        System.out.println("Implicit Conversion:");
+        System.out.println("Integer value: " + intVal);
+        System.out.println("Converted to double: " + doubleVal);
+
+        // Explicit Type Casting (Narrowing)
+        double pi = 3.14159;
+        int approx = (int) pi; // double explicitly cast to int
+
+        System.out.println("\nExplicit Conversion:");
+        System.out.println("Double value: " + pi);
+        System.out.println("Converted to int: " + approx);
+    }
+}

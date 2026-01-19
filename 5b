@@ -1,0 +1,31 @@
+// Dynamic Method Dispatch Example (Hierarchical Inheritance)
+
+class Shape {
+    void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+class Rectangle extends Shape {
+    void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}
+
+public class DynamicDispatchExample {
+    public static void main(String[] args) {
+        Shape s; // reference of superclass
+
+        s = new Circle();     // object of subclass Circle
+        s.draw();             // calls Circle's draw()
+
+        s = new Rectangle();  // object of subclass Rectangle
+        s.draw();             // calls Rectangle's draw()
+    }
+}

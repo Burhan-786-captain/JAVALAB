@@ -1,0 +1,16 @@
+public class ShiftOperators {
+    public static void main(String[] args) {
+
+        int x = 5;
+
+        // shifting the values by using left shift operator
+        int y = x << 4;
+        System.out.println("The left shifted value is: " + y);
+
+        int a = 80;
+
+        // shifting the values by 4 using right shift operator
+        int b = a >> 4;
+        System.out.println("The right shifted value is: " + b);
+    }
+}
